@@ -55,5 +55,5 @@ history of commits with date, author, description and unical ID like hashline
 get back to some saved (commited) point in a past. We check commit ID by "git log" and type:
 > git checkout 7ac6b76cbac6b7ca7bac879acb (ID)
 
-it wont work (abort) if we have some changes/filles wich haven't been added
+it wont work (abort) if we have some changes/filles wich haven't been commited
 
