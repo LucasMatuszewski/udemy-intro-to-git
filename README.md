@@ -32,6 +32,9 @@ Tell GIT to track a fille from tracked folder.
 But it still don't add it to a REPO untill we will commit it.
 GIT don't track all files in a folder automaticaly after INIT, we have to add them.
 
+> IMPORTANT: we can add all changes / files at once ussing dot ".":
+> git add .
+
 ##GIT commit -m "messege / description"
 SAVED POINT IN TIME (we can go back to this point)
 We can add many new filles and change them, but they wont be in a REPO untill we will COMMIT them.
@@ -40,8 +43,17 @@ While commiting we can add description of changes, what we are commiting.
 > IMPORTANT: there is convention to use present tense, like:
 > git commit -m "add app.js file" (NOT "added")
 
-##GIT rm - REMOVE
+##GIT rm - REMOVE file
 
 ##GIT mv - Change a name or move a file to other directory
 
-##GIT 
+
+##GIT log
+history of commits with date, author, description and unical ID like hashline
+
+##GIT checkout
+get back to some saved (commited) point in a past. We check commit ID by "git log" and type:
+> git checkout 7ac6b76cbac6b7ca7bac879acb (ID)
+
+it wont work (abort) if we have some changes/filles wich haven't been added
+
