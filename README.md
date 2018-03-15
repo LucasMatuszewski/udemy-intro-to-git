@@ -51,6 +51,14 @@ While commiting we can add description of changes, what we are commiting.
 ##GIT log
 history of commits with date, author, description and unical ID like hashline
 
+
+###HEAD - is a pointer in time.
+HEAD show us a place in time (commit) on wich we are working now.
+Usualy it show us "master" becouse we work on main branch (the newest version)
+But when we use "git checkout ID" it will show us HEAD detached at 7ac6b76 (a begining of ID we are working)
+*detached = oderwany, oddzielny*
+
+
 ##GIT checkout
 to chackout previous code (usualy without changing old version)
 Get back to some saved (commited) point in a past. We check commit ID by "git log" and type:
@@ -61,7 +69,31 @@ it wont work (abort) if we have some changes/filles wich haven't been commited
 If we want to go back to MASTER (neewest version) we don't need ID, just type:
 > git checkout master
 
+###BRANCH
+If we want to have 2 diferent versions of an aplication (we dont know witch way we wont to go, want make some changes in old commit we are checking out) we can make a new branch (it have its own commits history and we can develope 2 branches independently)
+To make a new branch we could type:
+> git branch <branch name> <commit id>
+> <commit id> is optional, but it will make branch from this commit (not from a HEAD commit)
+
+###GIT show-branch
+To see all branches and they commits history
+
+###GIT checkout <branch-name>
+	Take HEAD to this branch, we can work on it.
+
+##GIT MERGE <branch-name>
+it merge 2 branches to one, merging also files.
+If we want to marge some branch to master, the HEAD should be on Master
+IT WILL AUTOMATICALY MERGE FILES WITH CODE AND SHOW DIFERENCES IN A FILLE.
+USUALY WE HAVE TO CHECK MANUALY EFECTS OF MERGING
+
+
 ###REVERT GIT REPO
-Most of developers use and remember only about 7 GIT commands, and have to check on internet how to do something rare, like REVERT GIT REPO. So its good to have links like this:
 https://stackoverflow.com/questions/4114095/how-to-revert-git-repository-to-a-previous-commit
+
+> NOTE:
+> Most of developers use and remember only about 7 GIT commands,
+> and have to check on internet how to do something rare, like REVERTING GIT REPO.
+
+
 
