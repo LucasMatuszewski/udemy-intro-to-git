@@ -60,32 +60,32 @@ But when we use "git checkout ID" it will show us HEAD detached at 7ac6b76 (a be
 
 
 ##GIT checkout
-to chackout previous code (usualy without changing old version)
+to chack out previous code (usualy without changing enythig, just look)
 Get back to some saved (commited) point in a past. We check commit ID by "git log" and type:
 > git checkout 7ac6b76cbac6b7ca7bac879acb (ID)
 
 it wont work (abort) if we have some changes/filles wich haven't been commited
 
-If we want to go back to MASTER (neewest version) we don't need ID, just type:
+If we want to go back to MASTER (newest version) we don't need it's ID, just type:
 > git checkout master
 
-###BRANCH
+##GIT BRANCH <branch-name>
 If we want to have 2 diferent versions of an aplication (we dont know witch way we wont to go, want make some changes in old commit we are checking out) we can make a new branch (it have its own commits history and we can develope 2 branches independently)
 To make a new branch we could type:
-> git branch <branch name> <commit id>
+> git branch <branch-name> <commit id>
 > <commit id> is optional, but it will make branch from this commit (not from a HEAD commit)
 
 ###GIT show-branch
 To see all branches and they commits history
 
 ###GIT checkout <branch-name>
-	Take HEAD to this branch, we can work on it.
+	Take HEAD to this branch, we can work on it. Make some changes.
 
 ##GIT MERGE <branch-name>
 it merge 2 branches to one, merging also files.
 If we want to marge some branch to master, the HEAD should be on Master
 IT WILL AUTOMATICALY MERGE FILES WITH CODE AND SHOW DIFERENCES IN A FILLE.
-USUALY WE HAVE TO CHECK MANUALY EFECTS OF MERGING
+USUALY WE HAVE TO CHECK / FIX MANUALY EFECTS OF MERGING, add it and commit it.
 
 
 ###REVERT GIT REPO
@@ -95,5 +95,12 @@ https://stackoverflow.com/questions/4114095/how-to-revert-git-repository-to-a-pr
 > Most of developers use and remember only about 7 GIT commands,
 > and have to check on internet how to do something rare, like REVERTING GIT REPO.
 
+If You want to go back to some point and continue development from this point (canceling some part of writen code, e.g. if it havent work) we can REVERT to some old commit ID and commit it again to start working with this old version:
 
+> git revert --no-commit 0766c053..HEAD
+> git commit
+This will revert everything from the HEAD back to the commit hash, meaning it will recreate that commit state in the working tree as if every commit since had been walked back. You can then commit the current tree, and it will create a brand new commit essentially equivalent to the commit you "reverted" to.
 
+(The *--no-commit* flag lets git revert all the commits at once- otherwise you'll be prompted for a message for each commit in the range, littering your history with unnecessary new commits.)
+
+This is a safe and easy way to rollback to a previous state. No history is destroyed, so it can be used for commits that have already been made public.
