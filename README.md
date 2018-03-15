@@ -52,8 +52,16 @@ While commiting we can add description of changes, what we are commiting.
 history of commits with date, author, description and unical ID like hashline
 
 ##GIT checkout
-get back to some saved (commited) point in a past. We check commit ID by "git log" and type:
+to chackout previous code (usualy without changing old version)
+Get back to some saved (commited) point in a past. We check commit ID by "git log" and type:
 > git checkout 7ac6b76cbac6b7ca7bac879acb (ID)
 
 it wont work (abort) if we have some changes/filles wich haven't been commited
+
+If we want to go back to MASTER (neewest version) we don't need ID, just type:
+> git checkout master
+
+###REVERT GIT REPO
+Most of developers use and remember only about 7 GIT commands, and have to check on internet how to do something rare, like REVERT GIT REPO. So its good to have links like this:
+https://stackoverflow.com/questions/4114095/how-to-revert-git-repository-to-a-previous-commit
 
