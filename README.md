@@ -139,3 +139,31 @@ This is a safe and easy way to rollback to a previous state. No history is destr
 > git push -u origin master
 
 Sometimes you have to update your version of git or git for windows.
+
+##GIT remote
+> git remote add <shortcut-name> <remote-url>
+	To add new remote repository, e.g. from github.com 
+
+> git remote -v
+	Show all added remote repositories with URL
+
+##GIT clone
+> git clone <remote-repository-url>
+	To clone remote repository on our disc, e.g. from Github.com
+
+##GIT fetch
+> git fetch <remote-repository-name>
+	When we have cloned repository, we can download remote changes to local disc usigng "fetch"
+
+
+##GIT push
+To send local commit to remote repository
+> git push -u <remote-repository-name> <branch>
+
+> git push -u origin master
+Is the same as:
+> git push origin master
+> git branch --set-upstream master origin/master
+
+If we use "-u" we tell git to track remote branch "master"
+Without "-u" we have to tell GIT wich branch to track with "--set-upstream"
