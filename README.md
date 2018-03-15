@@ -1,17 +1,18 @@
 >UDEMY Bootcamp by Colt Steele
 
-#GIT - Version Control System
+#GIT - Version Control System#
 Developed in 2005 by Linus Torvalds to make a core of Linux OS. Its on GNU GPL licence.
 Better then SCM tools like Subversion or CVS.
 
-##REPO - repository, folder with application/project witch is tracked by GIT
+##REPO - repository##
+folder with application/project witch is tracked by GIT
 
 GIT REPO is only a folder with backup files on your computer.
 BUT You can synchronize this files with GITHUB or Atlassian BITBUCKET (competitor of git), web apps to cooperate and share projects.
 
-#GIT Commands in terminal:
+#GIT Commands in terminal:#
 
-##GIT init
+##GIT init##
 *Just type "git init" when you are on a directory to follow*
 Initializing GIT to follow some folder and control versions of files/folders in it.
 So its good to keep all versions of a Project/App in one directory and make a REPO for this directory.
@@ -132,6 +133,9 @@ This is a safe and easy way to rollback to a previous state. No history is destr
 1. Create new repository on Github ("+" on the top-right of a page)
 
 2. use a command from github to add github to local GIT reporistory:
-git remote add origin https://github.com/LucasMatuszewski/udemy-intro-to-git.git
+> git remote add origin https://github.com/LucasMatuszewski/udemy-intro-to-git.git
 
 3. push the local repository to github:
+> git push -u origin master
+
+Sometimes you have to update your version of git or git for windows.
