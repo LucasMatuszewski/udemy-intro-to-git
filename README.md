@@ -78,8 +78,11 @@ To make a new branch we could type:
 > git branch <branch-name> <commit id>
 > <commit id> is optional, but it will make branch from this commit (not from a HEAD commit)
 
+###GIT branch
+(without a <branch-name>) it will show a list of branches
+
 ###GIT show-branch
-To see all branches and they commits history
+To see all branches AND they commits history
 
 ###GIT checkout <branch-name>
 	Take HEAD to this branch, we can work on it. Make some changes.
@@ -101,13 +104,10 @@ https://stackoverflow.com/questions/4114095/how-to-revert-git-repository-to-a-pr
 If You want to go back to some point and continue development from this point (canceling some part of writen code, e.g. if it havent work) we can REVERT to some old commit ID and commit it again to start working with this old version:
 
 > git revert --no-commit 0766c053..HEAD
-> git commit -m "comment describing that we have REVERTED, and where / why"
+> git commit -m "comment: REVERT BACK to <ID>"
 This will revert everything from the HEAD back to the commit hash, meaning it will recreate that commit state in the working tree as if every commit since had been walked back. You can then commit the current tree, and it will create a brand new commit essentially equivalent to the commit you "reverted" to.
 
 (The *--no-commit* flag lets git revert all the commits at once- otherwise you'll be prompted for a message for each commit in the range, littering your history with unnecessary new commits.)
 
 This is a safe and easy way to rollback to a previous state. No history is destroyed, so it can be used for commits that have already been made public.
 
-
-
-cnbxhtdku,g. gb
