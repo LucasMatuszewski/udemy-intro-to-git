@@ -109,5 +109,4 @@ This will revert everything from the HEAD back to the commit hash, meaning it wi
 This is a safe and easy way to rollback to a previous state. No history is destroyed, so it can be used for commits that have already been made public.
 
 
-
-cnbxhtdku,g. gb
+asdasa assc acs
