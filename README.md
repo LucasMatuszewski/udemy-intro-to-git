@@ -69,6 +69,9 @@ it wont work (abort) if we have some changes/filles wich haven't been commited
 If we want to go back to MASTER (newest version) we don't need it's ID, just type:
 > git checkout master
 
+to DISCARD changes (e.g. take back deleted file) use command:
+> git checkout -- <file-name like: app.js>
+
 ##GIT BRANCH <branch-name>
 If we want to have 2 diferent versions of an aplication (we dont know witch way we wont to go, want make some changes in old commit we are checking out) we can make a new branch (it have its own commits history and we can develope 2 branches independently)
 To make a new branch we could type:
@@ -98,9 +101,13 @@ https://stackoverflow.com/questions/4114095/how-to-revert-git-repository-to-a-pr
 If You want to go back to some point and continue development from this point (canceling some part of writen code, e.g. if it havent work) we can REVERT to some old commit ID and commit it again to start working with this old version:
 
 > git revert --no-commit 0766c053..HEAD
-> git commit
+> git commit -m "comment describing that we have REVERTED, and where / why"
 This will revert everything from the HEAD back to the commit hash, meaning it will recreate that commit state in the working tree as if every commit since had been walked back. You can then commit the current tree, and it will create a brand new commit essentially equivalent to the commit you "reverted" to.
 
 (The *--no-commit* flag lets git revert all the commits at once- otherwise you'll be prompted for a message for each commit in the range, littering your history with unnecessary new commits.)
 
 This is a safe and easy way to rollback to a previous state. No history is destroyed, so it can be used for commits that have already been made public.
+
+
+
+cnbxhtdku,g. gb
