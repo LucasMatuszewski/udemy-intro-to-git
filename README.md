@@ -139,6 +139,9 @@ This is a safe and easy way to rollback to a previous state. No history is destr
 > git push -u origin master
 
 Sometimes you have to update your version of git or git for windows.
+Usualy you have to login or set user.email:
+> git config --global user.email "you@example.com"
+
 
 ##GIT remote
 > git remote add <shortcut-name> <remote-url>
