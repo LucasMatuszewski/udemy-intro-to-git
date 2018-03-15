@@ -78,14 +78,29 @@ To make a new branch we could type:
 > git branch <branch-name> <commit id>
 > <commit id> is optional, but it will make branch from this commit (not from a HEAD commit)
 
+To create new branch and switch to it immediately type:
+> git checkout -b <new-branch-name>
+(so "-b" tels us to make a new branch when we are checking out)
+
+we can also create a new branch from previous commit and go to it:
+> git checkout -b <new-branch-name> <commit-id>
+
+
+GIT tutorial from Ian:
+https://www.youtube.com/watch?v=_4d1gpmcke4&list=PL86ehqHzxhy4XX_qZZE_5mrp38WGZRzTO&index=11
+
 ###GIT branch
 (without a <branch-name>) it will show a list of branches
 
 ###GIT show-branch
 To see all branches AND they commits history
 
+###Removing a branch
+> git branch -d <branch-name>
+
 ###GIT checkout <branch-name>
 	Take HEAD to this branch, we can work on it. Make some changes.
+
 
 ##GIT MERGE <branch-name>
 it merge 2 branches to one, merging also files.
@@ -111,3 +126,12 @@ This will revert everything from the HEAD back to the commit hash, meaning it wi
 
 This is a safe and easy way to rollback to a previous state. No history is destroyed, so it can be used for commits that have already been made public.
 
+
+#GIThub.com
+
+1. Create new repository on Github ("+" on the top-right of a page)
+
+2. use a command from github to add github to local GIT reporistory:
+git remote add origin https://github.com/LucasMatuszewski/udemy-intro-to-git.git
+
+3. push the local repository to github:
