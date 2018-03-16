@@ -178,24 +178,42 @@ git branch --set-upstream master origin/master
 If we use `-u` we tell git to track remote branch "master"
 Without `-u` we have to tell GIT wich branch to track with `--set-upstream`
 
+## GIT Pull Request
+Code Review System from GitHub. Ask others (usualy internal: developers, testers, designers, friends) for review, help, advice or tests before deploying to production (making changes public).
+Many developers use Pull only to ask for Merge (if only Admin/CTO have a right to merge and deploy), but its better to use Pull Requests to review the code long before You want to merge it into master for deployment.
+
+You have to buy account on GitHub to have private Repos and internal Pull Requests only to Team members.
+
 
 # GIT-Flow vs GitHub Flow
-http://scottchacon.com/2011/08/31/github-flow.html
 
 ## GitHub Flow:
-Deploy all changes fast without "releases"
+Deploy all changes fast without "releases" (**simple**)
 
-1. Anything in the master branch is deployable (**hard rule**)
+1. Anything in the master branch is deployable, tested (**hard rule**)
 2. To work on something new, create a descriptively named branch off of master (ie: new-oauth2-scopes)
 3. Commit to that branch locally and regularly push your work to the same named branch on the server
 4. When you need feedback or help, or you think the branch is ready for merging, open a pull request
 5. After someone else has reviewed and signed off on the feature, you can merge it into master
 6. Once it is merged and pushed to ‘master’, you can and should deploy immediately
 
-That is the entire flow. It is very simple, very effective and works for fairly large teams - GitHub is 35 employees now, maybe 15-20 of whom work on the same project (github.com) at the same time. I think that most development teams - groups that work on the same logical code at the same time which could produce conflicts - are around this size or smaller. Especially those that are progressive enough to be doing rapid and consistent deployments.
+That is the entire flow. It is very simple, very effective and works for fairly large teams - GitHub is 35 employees now, maybe 15-20 of whom work on the same project (github.com) at the same time.
+
+GtiHub Flow is for teams that have set up a culture of shipping, who push to production every day, who are constantly testing and deploying.
+
+http://scottchacon.com/2011/08/31/github-flow.html
+
 
 ## GIT-Flow:
+Slower, for bigger projects/software.
 Deploy releases (like v1.0, v1.2, v2.0) containing many changes, after tests and bug-fixes.
+
+Use 5 or more Branches:
+> Master = production branch (public app)
+> Develop = main branch for developers to develope main app / software
+> Feature = branches for developing seperate/new features, we merge it to Develop branch when ready
+> Release = many changes from development do test and to fix-bugs before merge to master (publicly)
+> Hotfix = after merging release to master we found a big bug, we fix it fast on hotfix branch
 
 https://jeffkreeftmeijer.com/git-flow/
 
