@@ -1,18 +1,18 @@
->UDEMY Bootcamp by Colt Steele
-
-#GIT - Version Control System#
+#GIT - Version Control System
 Developed in 2005 by Linus Torvalds to make a core of Linux OS. Its on GNU GPL licence.
 Better then SCM tools like Subversion or CVS.
 
-##REPO - repository##
+>UDEMY Bootcamp by Colt Steele
+
+##REPO - repository
 folder with application/project witch is tracked by GIT
 
 GIT REPO is only a folder with backup files on your computer.
 BUT You can synchronize this files with GITHUB or Atlassian BITBUCKET (competitor of git), web apps to cooperate and share projects.
 
-#GIT Commands in terminal:#
+#GIT Commands in terminal:
 
-##GIT init##
+##GIT init
 *Just type "git init" when you are on a directory to follow*
 Initializing GIT to follow some folder and control versions of files/folders in it.
 So its good to keep all versions of a Project/App in one directory and make a REPO for this directory.
@@ -170,3 +170,18 @@ Is the same as:
 
 If we use "-u" we tell git to track remote branch "master"
 Without "-u" we have to tell GIT wich branch to track with "--set-upstream"
+
+
+#GIT-Flow vs GitHub Flow
+http://scottchacon.com/2011/08/31/github-flow.html
+
+##GitHub Flow:
+
+1. Anything in the master branch is deployable
+2. To work on something new, create a descriptively named branch off of master (ie: new-oauth2-scopes)
+3. Commit to that branch locally and regularly push your work to the same named branch on the server
+4. When you need feedback or help, or you think the branch is ready for merging, open a pull request
+5. After someone else has reviewed and signed off on the feature, you can merge it into master
+6. Once it is merged and pushed to ‘master’, you can and should deploy immediately
+
+That is the entire flow. It is very simple, very effective and works for fairly large teams - GitHub is 35 employees now, maybe 15-20 of whom work on the same project (github.com) at the same time. I think that most development teams - groups that work on the same logical code at the same time which could produce conflicts - are around this size or smaller. Especially those that are progressive enough to be doing rapid and consistent deployments.
