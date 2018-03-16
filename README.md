@@ -191,6 +191,7 @@ You have to buy account on GitHub to have private Repos and internal Pull Reques
 Deploy all changes fast (every day!) without "releases" (**simple**)
 
 > **Deploy** = to send on production (public server, app will be available for use)
+
 > **Production** = main copy of the software to be used by users, instaled on production server in a production environment. Other copies (branches) could be installed in a test environment or development environment.
 
 1. Anything in the `master` branch is deployable = tested and safe to deploy (**hard rule**)
