@@ -188,18 +188,23 @@ You have to buy account on GitHub to have private Repos and internal Pull Reques
 # GIT-Flow vs GitHub Flow
 
 ## GitHub Flow:
-Deploy all changes fast without "releases" (**simple**)
+Deploy all changes fast (every day!) without "releases" (**simple**)
 
-1. Anything in the master branch is deployable, tested (**hard rule**)
-2. To work on something new, create a descriptively named branch off of master (ie: new-oauth2-scopes)
-3. Commit to that branch locally and regularly push your work to the same named branch on the server
-4. When you need feedback or help, or you think the branch is ready for merging, open a pull request
-5. After someone else has reviewed and signed off on the feature, you can merge it into master
-6. Once it is merged and pushed to ‘master’, you can and should deploy immediately
+> **Deploy** = to send on production (public server, app will be available for use)
+> **Production** = main copy of the software to be used by users, instaled on production server in a production environment. Other copies (branches) could be installed in a test environment or development environment.
+
+1. Anything in the `master` branch is deployable = tested and safe to deploy (**hard rule**)
+2. To work on something new (anything), create a descriptively named branch off of master (ie: *new-oauth2-scopes*, *user-content-cache-key*)
+3. `Commit` to that branch locally and regularly `push` your work to the same named branch on the server
+4. When you need feedback or help, or you think the branch is ready for merging, open a `pull request`
+5. After someone else has reviewed and signed off on the feature, you can `merge` it into master
+6. Once it is merged and pushed to `master`, you can and should deploy immediately
 
 That is the entire flow. It is very simple, very effective and works for fairly large teams - GitHub is 35 employees now, maybe 15-20 of whom work on the same project (github.com) at the same time.
 
 GtiHub Flow is for teams that have set up a culture of shipping, who push to production every day, who are constantly testing and deploying.
+
+Everything that is NOT master is simply something being worked on. You have to worry only about master branch. Push to features branches regulary to have a backup of Your code.
 
 http://scottchacon.com/2011/08/31/github-flow.html
 
